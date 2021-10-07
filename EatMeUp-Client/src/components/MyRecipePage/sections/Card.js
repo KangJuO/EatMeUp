@@ -30,7 +30,9 @@ const Card = ({ recipes }) => {
         {/* 유저프로필과 삭제, 수정버튼을 감싸는 컨테이너 */}
 
         {/* 레시피메인이미지사진 영역 */}
-        <Link to={`/recipe/info/${recipe.id}`}><img src={recipe.main_image} alt='recipe' className='recipe-img' /></Link>
+        <Link to={`/recipe/info/${recipe.id}`}>
+          <img src={recipe.main_image} alt='recipe' className='recipe-img' />
+        </Link>
 
         {/* figure태그의 캡션 */}
         <div>
@@ -60,9 +62,9 @@ const Card = ({ recipes }) => {
           {/* 레시피 주재료들 */}
           <div className='recipe-ingre_box'>
             <div className='ingres'>
-            {recipe.foods.slice(0, 3).map((food, idx) => {
-              return <span key={idx}>#{food.name}</span>;
-            })}
+              {recipe.foods.slice(0, 3).map((food, idx) => {
+                return <button key={idx}>#{food.name}</button>;
+              })}
             </div>
           </div>
         </div>
@@ -110,13 +112,13 @@ const Recipes = styled.div`
     text-indent: 5px;
     margin-left: 15px;
     font-weight: 500;
+    font-size: 18px;
   }
 
   .recipe-ingre_box {
     font-size: 14px;
     display: flex;
-
-    margin: 10px 0px 15px 10px;
+    margin: 5px 0px 15px 10px;
   }
 
   .ingre-label {
@@ -125,12 +127,13 @@ const Recipes = styled.div`
   }
 
   .ingres {
-    font-size: 11px;
     margin-left: 5px;
   }
 
-  .ingres > span {
+  .ingres > button {
     padding: 3px 8px;
+    border: none;
+    color: #404040;
     background-color: #eaeaea;
     border-radius: 30px;
     margin-right: 5px;
@@ -153,10 +156,15 @@ const Recipes = styled.div`
     margin: 0;
   }
 
+  @media screen and (max-width: 550px) {
+    width: 80%;
+  }
+
   @media screen and (max-width: 375px) {
+    width: 95%;
     height: 125px;
     display: flex;
-    
+
     margin-bottom: 10px;
 
     img {
@@ -173,13 +181,15 @@ const Recipes = styled.div`
       margin: 30px 0px 0px 0px;
     }
 
-    .ingres > span {
+    .ingres > button {
+      font-size: 10px;
+      border: none;
       padding: 3px 5px;
       background-color: #eaeaea;
       border-radius: 30px;
       margin-right: 3px;
     }
-    
+
     .fa-clock {
       font-size: 9px;
       margin: 0;
@@ -198,7 +208,6 @@ const Recipes = styled.div`
       display: flex;
       margin: 10px 0px 5px 0px;
     }
-
 
     .title_box {
       text-indent: 5px;

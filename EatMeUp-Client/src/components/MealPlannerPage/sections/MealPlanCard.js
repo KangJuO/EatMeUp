@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import theme from "../../StyledComponent/theme";
 import styled from "styled-components";
 
 const MealPlanCard = ({ addToPlan, mealPlan, setMealPlan }) => {
@@ -93,60 +92,30 @@ const PlanCard = styled.div`
   @media screen and (max-width: 1300px) {
     width: 95%;
     min-height: 200px;
-   
+    min-width:80%;
+    max-width: 80%;
+    overflow-x: scroll;
   }
-
-  @media screen and (max-width: 375px) {
-    width: 95%;
-    max-width: 260px;
+  @media screen and (max-width: 657px) {
     margin: 5px auto;
+    min-width: 97%;
     max-height: 250px;
     overflow-x: scroll;
   }
-`;
-
-const AddTodo = styled.div`
-  width: 95%;
-  margin-top: 10px;
-  display: flex;
-  margin: 5px auto;
-  justify-content: center;
-
-  .input {
-    width: 75%;
-    height: 35px;
-    border-radius: 20px 0px 0px 20px;
-    border: 1px solid ${theme.colors.lightgrey};
-    font-size: 13px;
-  }
-
-  .input > input {
-    width: 95%;
-    height: 30px;
-    border: none;
-  }
-
-  input:focus {
-    outline: none;
-  }
-
-  .addBtn {
-    border-radius: 0px 20px 20px 0px;
-    width: 25%;
-    height: 35px;
-    font-size: 12px;
-    background-color: white;
-    border: 1px solid ${theme.colors.lightgrey};
-    color: ${theme.colors.darkgray};
+  @media screen and (max-width: 375px) {
+    margin: 5px auto;
+    min-width: 97%;
+    max-height: 250px;
+    overflow-x: scroll;
   }
 `;
 
 const Plans = styled.div`
   @media screen and (max-width: 1300px) {
     display: flex;
-    max-width: 430px;
     overflow-x: scroll;
   }
+ 
 `;
 
 const MealPlan = styled.div`

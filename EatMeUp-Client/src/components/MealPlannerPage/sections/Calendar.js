@@ -237,57 +237,30 @@ const CalendarBtn = styled(MiddleBtn)`
   span {
     color: #303030;
   }
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 550px) {
     width: 65px;
-    height: 30px;
-    font-size: 12px;
-    float: right;
-    margin-right: 4px;
+    height: 34px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 450px) {
     width: 65px;
-    height: 30px;
-    font-size: 12px;
-    float: right;
-    margin-right: 4px;
-  }
-`;
-
-const MonthBtn = styled.button`
-  width: 100px;
-  height: 45px;
-  border-radius: 30px 0px 0px 30px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-
-  @media screen and (max-width: 375px) {
-    width: 60px;
     height: 30px;
     font-size: 13px;
-    margin-left: 150px;
     margin-top: 20px;
-    font-size: 12px;
+    margin-right: 4px;
+    float: right;
   }
-`;
-
-const WeekBtn = styled.button`
-  width: 100px;
-  height: 45px;
-  border-radius: 0px 30px 30px 0px;
-  border: none;
-  background-color: white;
-  border: 1px solid #eaeaea;
-  font-weight: bold;
-  cursor: pointer;
 
   @media screen and (max-width: 375px) {
-    width: 60px;
+    width: 65px;
     height: 30px;
     font-size: 12px;
+    float: right;
+    margin-right: 4px;
+   
   }
 `;
+
 
 const ThisMonth = styled.span`
   font-style: normal;
@@ -295,12 +268,9 @@ const ThisMonth = styled.span`
   font-size: 30px;
   color: #303030;
 
-  @media screen and (max-width: 575px) {
-    font-size: 15px;
-  }
 
-  @media screen and (max-width: 375px) {
-    font-size: 15px;
+  @media screen and (max-width: 550px) {
+    font-size: 24px;
   }
 `;
 
@@ -331,25 +301,21 @@ const RightControl = styled.button`
 `;
 const CalendarControls = styled.div`
   width: 92%;
-  height: 150px;
+
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 10px auto;
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 450px) {
     width: 95%;
-    height: 90px;
-    display: block;
-    margin-top: 20px;
+    height: 55px;
+    flex-direction: column-reverse;
+
   }
 
-  @media screen and (max-width: 375px) {
-    width: 95%;
-    height: 90px;
-    display: block;
-    margin-top: 20px;
-  }
+
 `;
 
 const Table = styled.table`
@@ -358,7 +324,7 @@ const Table = styled.table`
   margin: 0 auto;
   margin-bottom: 10px;
 
-  @media screen and (max-width: 585px) {
+  @media screen and (max-width: 450px) {
     border-spacing: 2px;
     width: 95%;
   }
@@ -380,7 +346,7 @@ const THead = styled.td`
   .weekend {
     color: ${theme.colors.red};
   }
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 450px) {
     width: 50px;
     height: 20px;
     border-radius: 5px;
@@ -435,7 +401,7 @@ const Cell = styled.td`
 
   @media screen and (max-width: 375px) {
     width: 40px;
-    height: 50px;
+    height: 100px;
     border-radius: 5px;
 
     .day {
@@ -467,7 +433,7 @@ const TodayCell = styled.td`
   }
   @media screen and (max-width: 775px) {
     width: 40px;
-    height: 30px;
+    height: 80px;
     border-radius: 5px;
 
     .day {
@@ -481,7 +447,7 @@ const TodayCell = styled.td`
 
   @media screen and (max-width: 375px) {
     width: 40px;
-    height: 30px;
+    height: 100px;
     border-radius: 5px;
 
     .day {
@@ -530,7 +496,7 @@ const HasPlanCell = styled.td`
 
   @media screen and (max-width: 375px) {
     width: 40px;
-    height: 30px;
+    height: 100px;
     border-radius: 5px;
     border: 1px solid ${theme.colors.yellow};
 
@@ -561,10 +527,14 @@ const Img = styled.div`
     object-fit: cover;
   }
   @media screen and (max-width: 575px) {
-    display: none;
+    width: 8px;
+    height: 8px;
+    margin: 3px;
   }
   @media screen and (max-width: 375px) {
-    display: none;
+    width: 8px;
+    height: 8px;
+    margin: 3px;
   }
 `;
 
